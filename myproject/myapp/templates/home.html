@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamaraj College of Engineering and Technology</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Kamaraj College of Engineering and Technology</h1>
+    <h2>Web Applications using Django Framework</h2>
+    <p> K. SANTHIYA, BTECH-IT</p>
+    <h3>Creating and Working with Template</h3>
+
+    <!-- ODD or EVEN Checker -->
+    <h3>ODD or EVEN Checker</h3>
+    <form method="GET">
+        <label for="number">Enter a number:</label>
+        <input type="text" id="number" name="number" />
+        <button type="submit">Check</button>
+    </form>
+
+    {% if number_result %}
+        <p>{{ number_result }}</p>
+    {% endif %}
+
+    <!-- Name Filter -->
+    <h3>Name Filter</h3>
+    <form method="GET">
+        <label for="character">Enter a character:</label>
+        <input type="text" id="character" name="character" />
+        <button type="submit">Search</button>
+    </form>
+
+    {% if name_result %}
+        <ul>
+            {% for name in name_result %}
+                <li>{{ name }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</center>
+</body>
+</html>
